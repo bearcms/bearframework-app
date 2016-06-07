@@ -2,13 +2,12 @@
     "name": "bearcms/bearframework-app",
     "description": "Bear CMS Skeleton Application for Bear Framework",
     "keywords": ["Bear CMS", "Skeleton application", "Bear Framework"],
-    "homepage": "https://github.com/bearcms/bearframework-app",
+    "homepage": "https://bearcms.com/",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ivo Petkov",
-            "email": "ivo@ivopetkov.com",
-            "homepage": "http://ivopetkov.com"
+            "email": "support@bearcms.com",
+            "homepage": "http://bearcms.com"
         }
     ],
     "require": {
