@@ -1,0 +1,19 @@
+{
+    "name": "bearcms/bearframework-app",
+    "description": "Bear CMS Skeleton Application for Bear Framework",
+    "keywords": ["Bear CMS", "Skeleton application", "Bear Framework"],
+    "homepage": "https://github.com/bearcms/bearframework-app",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivo Petkov",
+            "email": "ivo@ivopetkov.com",
+            "homepage": "http://ivopetkov.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "bearframework/bearframework": "0.8.*",
+        "bearcms/bearcms-bearframework-addon": "dev-master"
+    }
+}

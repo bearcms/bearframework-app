@@ -1,0 +1,1 @@
+The place for logs. The location if this directory is configured in /public/index.php
