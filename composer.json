@@ -4,10 +4,9 @@
     "keywords": ["Bear CMS", "Skeleton application", "Bear Framework"],
     "homepage": "https://bearcms.com/",
     "license": "MIT",
-    "authors": [
+    "support": [
         {
-            "email": "support@bearcms.com",
-            "homepage": "http://bearcms.com"
+            "email": "support@bearcms.com"
         }
     ],
     "require": {
