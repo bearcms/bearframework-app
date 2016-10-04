@@ -76,8 +76,9 @@ $app->routes->add('/', function() use ($context, $app) {
         </div>
         <div>
             Next:<br/>
-            1. Open /app/index.php, enter the CMS server details and remove this welcome page code.<br>
-            2. Open the <a href="' . $app->urls->get('/admin/') . '">admin page</a> (.../admin/) to create an administrator account.<br><br>
+            1. Open /public/index.php and enter the CMS server details.<br>
+            2. Open /app/index.php and remove this welcome page code.<br>
+            3. Open the <a href="' . $app->urls->get('/admin/') . '">admin page</a> (.../admin/) to create an administrator account.<br><br>
             View the <a href="https://bearcms.com/documentation/" target="_blank">documentation</a> for more information.
         </div>
     </body>
