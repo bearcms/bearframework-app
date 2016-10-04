@@ -9,7 +9,7 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "bearframework/bearframework": "0.8.*",
-        "bearcms/bearframework-addon": "0.1.*"
+        "bearframework/bearframework": "0.8.*|0.9.*",
+        "bearcms/bearframework-addon": "0.1.*|0.2.*"
     }
 }
