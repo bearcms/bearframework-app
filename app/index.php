@@ -2,8 +2,8 @@
 
 use BearFramework\App;
 
-/* @var $app \BearFramework\App */
-/* @var $context \BearFramework\App\AppContext */
+$app = App::get();
+$context = $app->getContext(__FILE__);
 /* @var $bearCMS \BearCMS */
 $bearCMS = $app->bearCMS;
 
