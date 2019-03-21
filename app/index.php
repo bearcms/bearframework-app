@@ -3,15 +3,13 @@
 use BearFramework\App;
 
 $app = App::get();
-$context = $app->getContext(__FILE__);
-/* @var $bearCMS \BearCMS */
-$bearCMS = $app->bearCMS;
 
-// Makes the directory /app/assets publicly accessible.
-// There is a file in this directory that is used for the welcome screen.
-$context->assets->addDir('/assets');
+$context = $app->contexts->get(__FILE__);
 
-// Creates the returns the welcome screen HTML code.
+// This is the beginning of the welcome contant that you can remove
+
+$context->assets->addDir('/assets'); // Makes the directory /app/assets publicly accessible.
+
 $app->routes->add('/', function() use ($context, $app) {
     return new App\Response\HTML('
 <!DOCTYPE html>
@@ -26,7 +24,7 @@ $app->routes->add('/', function() use ($context, $app) {
                 height: 100%;
             }
             body{
-                background-color: #1BB0CE;
+                background-color: #058cc4;
                 color: #fff;
                 font-family: helvetica,arial,sans-serif;
                 font-size: 14px;
@@ -41,7 +39,7 @@ $app->routes->add('/', function() use ($context, $app) {
                 align-items: center;
                 justify-content: center;
             }
-            body > div:last-child{
+            body > div:nth-child(2){
                 line-height: 180%;
                 padding-bottom: 1rem;
             }
@@ -76,12 +74,21 @@ $app->routes->add('/', function() use ($context, $app) {
         </div>
         <div>
             Next:<br/>
-            1. Open /public/index.php and enter the your site and CMS server details.<br>
-            2. Open /app/index.php and remove this welcome page code.<br>
-            3. Open the <a href="' . $app->urls->get('/admin/') . '">admin page</a> (.../admin/) to create an administrator account.<br><br>
-            View the <a href="https://bearcms.com/documentation/" target="_blank">documentation</a> for more information.
+            1. Open /app/index.php, enter the appSecretKey and remove the welcome page code.<br>
+            2. Open the <a href="' . $app->urls->get('/admin/') . '">admin page</a> (/admin) to create an administrator account.<br><br>
+            View the <a href="https://bearcms.com/support/" target="_blank">support articles</a> for more information.
         </div>
     </body>
 </html>
 ');
 });
+
+// This is the end of the welcome contant that you can remove
+// Enables the Bear CMS addon by providing an appSecretKey
+$app->addons->add('bearcms/bearframework-addon');
+$app->bearCMS->initialize([
+    'serverUrl' => 'https://r05.bearcms.com/', // The Bear CMS server url
+    'appSecretKey' => 'TODO', // The Bear CMS site secret key
+    'language' => 'en', // CMS interface language
+    'defaultThemeID' => 'bearcms/themeone'
+]);

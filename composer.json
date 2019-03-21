@@ -8,8 +8,8 @@
         "email": "support@bearcms.com"
     },
     "require": {
-        "php": ">=5.5.0",
-        "bearframework/bearframework": "0.8.*|0.9.*",
-        "bearcms/bearframework-addon": "0.1.*|0.2.*"
+        "php": ">=7.1.0",
+        "bearframework/bearframework": "1.*",
+        "bearcms/bearframework-addon": "1.*"
     }
 }
