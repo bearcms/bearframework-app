@@ -4,7 +4,7 @@ use BearFramework\App;
 
 $app = App::get();
 
-$context = $app->contexts->get(__FILE__);
+$context = $app->contexts->get(__DIR__);
 
 // This is the beginning of the welcome contant that you can remove
 
